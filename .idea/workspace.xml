@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511e74a7-5bcc-434a-a53d-7f7c70e9a36f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main2.js" beforeDir="false" afterPath="$PROJECT_DIR$/main2.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +31,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mygitproj" />
+  </component>
+  <component name="RunManager">
+    <configuration name="homework1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/homework/homework1.js" working-dir="$PROJECT_DIR$/homework">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.homework1.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -43,11 +53,43 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594189839264</updated>
-      <workItem from="1594189840685" duration="5419000" />
+      <workItem from="1594189840685" duration="6730000" />
+      <workItem from="1594231975287" duration="14000" />
+      <workItem from="1594317448636" duration="10000" />
+      <workItem from="1594372930138" duration="646000" />
+      <workItem from="1594571364232" duration="6000" />
+      <workItem from="1594576176339" duration="1255000" />
+      <workItem from="1594621020827" duration="5609000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1594582084172">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1594582084172" />
+    <state width="1515" height="203" key="GridCell.Tab.0.bottom" timestamp="1594379122366">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="203" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1594379122366" />
+    <state width="1515" height="203" key="GridCell.Tab.0.center" timestamp="1594379122366">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="203" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1594379122366" />
+    <state width="1515" height="203" key="GridCell.Tab.0.left" timestamp="1594379122365">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="203" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1594379122365" />
+    <state width="1515" height="203" key="GridCell.Tab.0.right" timestamp="1594379122366">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1515" height="203" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1594379122366" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1594625013265">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1594625013265" />
   </component>
 </project>
