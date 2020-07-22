@@ -1,3 +1,4 @@
+'use strict';
 // Functions
 
 // Function declaration
@@ -12,10 +13,10 @@ function myPow (a,b) {
     console.log(a);
     console.log(b);
     return a**b;
-}
+};
 
 // function call
-myPow(2,3);
+myPow(2,3); // передаем в функцию значения аргументов
 let result = myPow(2,4);
 
 // Function Expression
@@ -24,17 +25,21 @@ let result = myPow(2,4);
         <function body>
     }
  */
-const myPow_exp = function (a = 2, b) {
+const myPow_exp = function (a = 2, b) {//если есть значение по умолчанию, его лучше записывать последним?
     return a**b;
 };
 
 // Named function expression (NFE)
+// Не помню, зачем так делать. Помню только, что имя функции должно быть таким же, как имя переменной
 const progression = function progression (a, d, count) {
     console.log(a);
     if (count > 0) progression(a + d, d, count-1);
 };
 
 // Arrow functions
+// анонимные функции с особым синтаксисом
+// работают в том контексте, в котором объявлены
+// работают с фиксированным числом аргументов
 /*
     const [let] <name> = (arg1, arg2, ...args) => {
         <body>
@@ -62,4 +67,4 @@ const increment = a => {
 
 const increment1 = a => a + 1;
 
-const factory = field => ({field});
+const factory = field => ({field}); // вообще не помню, в чем соль

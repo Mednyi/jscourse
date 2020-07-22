@@ -70,4 +70,3 @@ typeof tank; // object
 let arr = [];
 arr = [12, 'asdfasdf', {a:10}];
 console.log(arr[1]); // console output : asdfasdf
-

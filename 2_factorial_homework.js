@@ -1,3 +1,4 @@
+'use strict';
 // Factorial
 let k = 1;
 let n = 5;

@@ -7,17 +7,17 @@ console.log(a+b);
 console.log(a-b);
 console.log(a/b);
 console.log(a*b);
-console.log(9%10);
-console.log(2**10);
-let с = a+b;
+console.log(9%10); // деление нацело
+console.log(2**10); //возведение в степень
+let c = a+b;
 
 // Унарные операторы
 console.log(+"15"); // унарный плюс - переводит строку в число
-console.log(c++);
-console.log(c--);
-console.log(--c);
-console.log(++c);
-let r = r + 5;
+console.log(c++); // увеличение значения на единицу, в консоли стартовое значение 
+console.log(c--); // уменьшение значения на единицу, в консоли стартовое значение 
+console.log(--c); // уменьшение значения на единицу, в консоли значение после выполнения операции
+console.log(++c); // увеличение значения на единицу, в консоли значение после выполнения операции
+let r = r + 5; //ниже альтернативные способы записи этой и подобных операций
 r += 5;
 r -= 5;
 r *= 5;
@@ -31,7 +31,7 @@ a == 10 ? console.log("Hello") : console.log("Bye");
 let l1 = true;
 let l2 = false;
 
-console.log(l1 && l2);
+console.log(l1 && l2); // И
 /*
     a && b = c
     0    0   0
@@ -39,7 +39,7 @@ console.log(l1 && l2);
     1    0   0
     1    1   1
  */
-console.log(l1 || l2);
+console.log(l1 || l2); // ИЛИ
 /*
     a && b = c
     0    0   0
@@ -47,7 +47,7 @@ console.log(l1 || l2);
     1    0   1
     1    1   1
  */
-console.log(!l2);
+console.log(!l2); // НЕ
 /*
     !a = c
     0    1
@@ -56,11 +56,11 @@ console.log(!l2);
 
 // Операторы сравнения
 
-console.log(l1 == l2);
-console.log(l1 === l2);
-console.log(l1 > l2);
-console.log(l1 <= l2);
-console.log(l1 != l2);
+console.log(l1 == l2); // равенство
+console.log(l1 === l2); // строгое равенство
+console.log(l1 > l2); // больше
+console.log(l1 <= l2); // меньше или равно
+console.log(l1 != l2); // не равно
 
 // Операторы побитовые
 console.log(11 | 15); // Побитовое или
@@ -123,5 +123,3 @@ do {                        // Цикл while с постусловием
     console.log(counter);
     counter++;
 } while (counter<10);
-
-
