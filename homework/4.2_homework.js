@@ -80,9 +80,10 @@ const getFolders = async () => {
 };
 
 // Написать асинхронную функцию, получающую все файлы папки по ее id: getFiles(folderId)
-const getFilesFromFolder = async () => {
+const getFilesFromFolder = async folderId => {
     let files = await getData('files'); // ожидание выполнения промиса getData для пути files
-    let filesFromFolder = filter.files(file => file.folderId === folderId); // СКОПИРОВАЛА, НЕ ПОНЯЛА ЗАПИСЬ
+    let filesFromFolder = files.filter(file => file.folderId === folderId); // СКОПИРОВАЛА, НЕ ПОНЯЛА ЗАПИСЬ
+    return filesFromFolder
 };
 
 // Написать асинхронную функцию, использующую getFolders, а затем getFiles для любой из папок и выводящую полученные данные на экран.
