@@ -35,7 +35,7 @@ const getData = path => new Promise((resolve, reject) => {
 
 const getFolders = async () => {
     return await getData('folders');
-};
+}; 
 const getFiles = async () => {
     return await getData('files');
 };
