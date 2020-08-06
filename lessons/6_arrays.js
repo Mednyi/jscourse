@@ -15,8 +15,8 @@ console.log(arr[2]); // will display 5
 
 const arrA = [1,2,3,4];
 const arrB = [5,6,7,8];
-const arrAB = [...arrA, ...arrB];
-const arrABcopy = [...arrAB];
+const arrAB = [...arrA, ...arrB]; // склеит массивы
+const arrABcopy = [...arrAB]; // сделает копию массива (не станет ссылаться на то же место в памяти, где массив arrAB)
 
 // map reduce
 

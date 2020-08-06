@@ -37,12 +37,12 @@ path будет Dante
 */
 
 data = {
-    "coffetea.ru/sale/tea": {
+    "drinks.ru/sale/tea": {
             type: 'green',
             area: 'Ceylon',
             amt: 2
         },
-    "coffetea.ru/sale/coffe": {
+    "drinks.ru/sale/coffe": {
             type: 'grain',
             area: 'Kenia',
             amt: 5
@@ -66,7 +66,9 @@ class HTTPRequest {
     async post(path, body) {
         const data = get(path);
         const body = data[basePath+path];
-        if
+        if 
+        }
+        return {folders, files};
     };
     async put(path, body) {};
     async deleteData(path) {};
