@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="511e74a7-5bcc-434a-a53d-7f7c70e9a36f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/4_homework.js" beforeDir="false" afterPath="$PROJECT_DIR$/homework/4_homework.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lessons/5_objects.js" beforeDir="false" afterPath="$PROJECT_DIR$/lessons/5_objects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/homework/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -29,10 +29,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../mygitproj" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\untitled2\lessons\7_modules" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="homework1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/homework/homework1.js" working-dir="$PROJECT_DIR$/homework">
@@ -71,6 +77,8 @@
       <workItem from="1596090605941" duration="1549000" />
       <workItem from="1596176946744" duration="5861000" />
       <workItem from="1596436463403" duration="6675000" />
+      <workItem from="1596476187662" duration="92000" />
+      <workItem from="1596782484303" duration="6182000" />
     </task>
     <servers />
   </component>
@@ -102,9 +110,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1594625013265" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1596438897153">
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1596785757396">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1596438897153" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1596785757396" />
   </component>
 </project>

@@ -18,13 +18,19 @@ data = {
 
 class HTTPRequest {
     constructor (basePath = '') {
-        basePath = this.basePath;
-    };
-    path = '';
-    async get(path) {
-        const response = await getData(basePath+path);
-        return response
-    };
-};
+        this.basePath = basePath;
+    }
+    async get(path = '') {
+        const response = await getData(this.basePath+path);
+        console.log(response);
+        return response;
+    }
+}
 
-new HTTPRequest('drinks.ru/sale/').get('tea');
+const myAPI = new HTTPRequest('drinks.ru/sale/');
+
+const getTea  = async () => {
+   const result = await myAPI.get('tea');
+   console.log(response);
+};
+getTea();
