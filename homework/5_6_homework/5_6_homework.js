@@ -36,6 +36,14 @@ path будет Dante
 5 Удалить данные
 */
 
+/*
+Дз:
+1. Создать модуль HTTPRequest, экспортирующий класс HTTPRequest
+2. Создать модуль MyAPI, использующий модуль HTTPRequest
+и экспортирующий методы для чтения/записи/обновления/добавления по конкретным путям(прим. getTea, setTea ...)
+3. Создать и подключить к странице модуль, использующий готовый функционал
+*/
+
 data = {
     "drinks.ru/sale/tea": {
         type: 'green',
@@ -49,7 +57,7 @@ data = {
     }
 };
 
-const createItem = (body = this.body, type = undefined, area = undefined, amt = undefined) => ({ [body.value]: { type, area, amt } });
+const createOrChangeItem = (body = this.body, type = null, area = null, amt = null) => ({ [body.value]: { type, area, amt } });
 
 const getData = path => new Promise((resolve, reject) => {
     const result = data[path];
@@ -73,7 +81,7 @@ class HTTPRequest {
             console.log('такой напиток уже добавлен')
         }
         else {
-            const newItem = createItem(this.body)
+            const newItem = createOrChangeItem(this.body)
             data.push(newItem)
         };
         return data
@@ -85,7 +93,9 @@ class HTTPRequest {
             console.log('такой напиток еще не добавлен')
         }
         else {
-            
+            data.body.type = cocoa
+            data.body.area = Chilie
+            data.body.amt = 7
         }
         return data
 
@@ -97,8 +107,10 @@ class HTTPRequest {
             console.log('такой напиток еще не добавлен')
         }
         else {
-            
+            delete data.basePath
         }
         return data
     };
 };
+
+
