@@ -1,4 +1,6 @@
 'use strict';
+import { v4 as uuidv4 } from 'uuid';
+uuidv4();
 /*
 Создать класс HTTPRequest, содержащий поля и методы
 basePath - по умолчанию ""
@@ -11,7 +13,7 @@ async put(path, body) - то же что и post , но не может созд
 
 async deleteData(path) - асинхронный метод, удаляющий значение в объекте data по ключу basePath+path (прим delete data[basePath+path])
 
-Пример 
+Пример
 data = {
           “lib.ru/authors/Dante” : {
                    name: “Dante”,
@@ -57,60 +59,56 @@ data = {
     }
 };
 
-const createOrChangeItem = (body = this.body, type = null, area = null, amt = null) => ({ [body.value]: { type, area, amt } });
+// const createOrChangeItem = (body = this.body, type = null, area = null, amt = null) => ({ [body.value]: { type, area, amt } });
 
+const createItem = (type, area, amt) => ({type, area, amt});
 const getData = path => new Promise((resolve, reject) => {
     const result = data[path];
     setTimeout(resolve, 5000, result);
 });
-
 
 class HTTPRequest {
     constructor(basePath = '') {
         this.basePath = basePath
     }
     async get(path = '') {
-        const response = await getData(this.basePath + path)
-        console.log(response)
+        const response = await getData(this.basePath + path);
+        console.log(response);
         return response
     }
-    async post(path, body) {
-        const data = get(path)
-        const body = data[this.basePath + path]
-        if (data.body != undefined) {
+    async post(path= '', body = {}) {
+        const result = await getData(this.basePath + path);
+        // const body = data[this.basePath + path]
+        if (result !== undefined) {
             console.log('такой напиток уже добавлен')
         }
         else {
-            const newItem = createOrChangeItem(this.body)
-            data.push(newItem)
-        };
-        return data
-    };
-    async put(path, body) { 
-        const data = get(path)
-        const body = data[this.basePath + path]
-        if (data.body = undefined) {
-            console.log('такой напиток еще не добавлен')
+            const newItem = createItem(body);
+            result[this.basePath + path] = newItem
+        }
+        return result
+    }
+    async put(path = '', body = {}) {
+        let result = await getData(this.basePath + path);
+        // const body = data[this.basePath + path];
+        if (result === undefined) {
+            console.log('такой напиток еще не добавлен');
+        } else {
+            result = {...result, ...body};
+        }
+        return result
+    }
+    async deleteData(path = '', body= {}) {
+        let result = await getData(this.basePath + path);
+        // const body = data[this.basePath + path]
+        if (result === undefined) {
+            console.log('такой напиток еще не добавлен');
         }
         else {
-            data.body.type = cocoa
-            data.body.area = Chilie
-            data.body.amt = 7
+            delete result[this.basePath + path];
         }
-        return data
-
-    };
-    async deleteData(path) { 
-        const data = get(path)
-        const body = data[this.basePath + path]
-        if (data.body = undefined) {
-            console.log('такой напиток еще не добавлен')
-        }
-        else {
-            delete data.basePath
-        }
-        return data
-    };
-};
+        return result;
+    }
+}
 
 

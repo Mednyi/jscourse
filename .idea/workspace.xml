@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511e74a7-5bcc-434a-a53d-7f7c70e9a36f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/homework/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/5_6_homework/5_6_homework.js" beforeDir="false" afterPath="$PROJECT_DIR$/homework/5_6_homework/5_6_homework.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +41,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\untitled2" />
       <recent name="D:\projects\untitled2\lessons\7_modules" />
     </key>
   </component>
@@ -78,7 +83,10 @@
       <workItem from="1596176946744" duration="5861000" />
       <workItem from="1596436463403" duration="6675000" />
       <workItem from="1596476187662" duration="92000" />
-      <workItem from="1596782484303" duration="6182000" />
+      <workItem from="1596782484303" duration="6764000" />
+      <workItem from="1596789726777" duration="598000" />
+      <workItem from="1596990482817" duration="24000" />
+      <workItem from="1597212177093" duration="3966000" />
     </task>
     <servers />
   </component>
