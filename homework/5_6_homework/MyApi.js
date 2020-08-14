@@ -1,12 +1,13 @@
 'use strict';
-import HTTPRequest from './HTTPRequest.js'
+import { HTTPRequest } from './HTTPRequest.js'
 
-const postCocoa = () => {
-    const cocoa = new HTTPRequest('drinks.ru/sale/')
-    const data = cocoa.post('cocoa', {type:null, area:'Chilie', amt:5})
-    console.log(data)  // promice возвращает reject
+const postCocoa = async () => {
+    const cocoa = new HTTPRequest('drinks.ru/sale/');
+    const response = await cocoa.post('cocoa', {type:null, area:'Chilie', amt:5});
+    console.log(response);  // promice возвращает reject
 };
 
+postCocoa();
 const postCoffee = 1;
 
 const putTea = 1;

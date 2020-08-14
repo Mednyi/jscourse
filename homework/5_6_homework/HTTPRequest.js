@@ -1,14 +1,15 @@
 'use strict';
 
+const data = {};
 const createItem = (type, area, amt) => ({type, area, amt});
 const getData = path => new Promise((resolve, reject) => {
     const result = data[path];
     setTimeout(resolve, 5000, result);
 });
 
-class HTTPRequest {
+export class HTTPRequest {
     constructor(basePath = '') {
-        this.basePath = basePath
+        this.basePath = basePath;
     }
     async get(path = '') {
         const response = await getData(this.basePath + path);
@@ -16,13 +17,13 @@ class HTTPRequest {
         return response
     }
     async post(path= '', body = {}) {
-        const result = await getData(this.basePath + path);
+        let result = await getData(this.basePath + path);
         if (result !== undefined) {
             console.log('такой напиток уже добавлен')
         }
         else {
-            const newItem = createItem(body);
-            result[this.basePath + path] = newItem
+            result = createItem(body.type, body.area, body.amt);
+            data[this.basePath + path] = result
         }
         return result
     }
@@ -41,9 +42,9 @@ class HTTPRequest {
             console.log('такой напиток еще не добавлен');
         }
         else {
-            delete result[this.basePath + path];
+            delete data[this.basePath + path];
         }
-        return result;
+        return data;
     }
 };
 
@@ -51,3 +52,4 @@ class HTTPRequest {
 export default {
     HTTPRequest
 }
+
