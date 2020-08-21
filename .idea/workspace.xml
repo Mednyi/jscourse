@@ -33,16 +33,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lessons/9_DOM events" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lessons/10_DOM manipulation" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\untitled2\lessons\9_DOM events" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\untitled2" />
       <recent name="D:\projects\untitled2\lessons\7_modules" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\untitled2\lessons\10_DOM manipulation" />
+      <recent name="D:\projects\untitled2\lessons\9_DOM events" />
     </key>
   </component>
   <component name="RunManager">
@@ -92,7 +93,11 @@
       <workItem from="1597593121804" duration="8000" />
       <workItem from="1597644295422" duration="5615000" />
       <workItem from="1597687614114" duration="132000" />
-      <workItem from="1597696837352" duration="9000" />
+      <workItem from="1597696837352" duration="695000" />
+      <workItem from="1597859869192" duration="6000" />
+      <workItem from="1597990667129" duration="2613000" />
+      <workItem from="1597993427855" duration="2777000" />
+      <workItem from="1598003615134" duration="731000" />
     </task>
     <servers />
   </component>
@@ -120,10 +125,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1515" height="203" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1594379122366" />
-    <state x="425" y="197" key="run.anything.popup" timestamp="1594625013265">
+    <state x="425" y="197" key="run.anything.popup" timestamp="1597991553912">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="425" y="197" key="run.anything.popup/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1594625013265" />
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1597991553912" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1596785757396">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
