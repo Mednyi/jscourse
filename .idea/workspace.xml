@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="511e74a7-5bcc-434a-a53d-7f7c70e9a36f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lessons/10_DOM manipulation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lessons/10_DOM manipulation/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lessons/10_DOM manipulation/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/lessons/10_DOM manipulation/todo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +39,14 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\untitled2" />
-      <recent name="D:\projects\untitled2\lessons\7_modules" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\untitled2\lessons\10_DOM manipulation" />
       <recent name="D:\projects\untitled2\lessons\9_DOM events" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\untitled2\homework\10_homework\shop" />
+      <recent name="D:\projects\untitled2" />
+      <recent name="D:\projects\untitled2\lessons\7_modules" />
     </key>
   </component>
   <component name="RunManager">
@@ -97,7 +100,9 @@
       <workItem from="1597859869192" duration="6000" />
       <workItem from="1597990667129" duration="2613000" />
       <workItem from="1597993427855" duration="2777000" />
-      <workItem from="1598003615134" duration="731000" />
+      <workItem from="1598003615134" duration="1375000" />
+      <workItem from="1598037639577" duration="132000" />
+      <workItem from="1598077368076" duration="6799000" />
     </task>
     <servers />
   </component>
@@ -125,10 +130,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1515" height="203" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1594379122366" />
-    <state x="425" y="197" key="run.anything.popup" timestamp="1597991553912">
+    <state x="425" y="197" key="run.anything.popup" timestamp="1598082899870">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="425" y="197" key="run.anything.popup/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1597991553912" />
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1598082899870" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1596785757396">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

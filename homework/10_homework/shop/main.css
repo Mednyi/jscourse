@@ -1,0 +1,53 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #222222;
+    color: white;
+    align-items: center;
+    height: 40px;
+    padding: 0px 32px;
+    font-weight: 600;
+}
+header .button {
+    height: 40px;
+    background-color: black;
+    box-sizing: border-box;
+    border-bottom: blue 2px solid;
+    position: relative;
+    top: 2px;
+}
+.controls {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    margin: 0px;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    grid-gap: 32px;
+    padding: 16px;
+    justify-content: center;
+}
+h4 {
+    margin: 0px;
+}
+.card {
+    border: 1px solid;
+    display: grid;
+    grid-gap: 48px;
+    padding: 16px;
+}
+.button {
+    background-color: yellow;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
