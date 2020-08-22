@@ -35,6 +35,8 @@ main {
 }
 h4 {
     margin: 0px;
+    display: flex;
+    justify-content: space-between;
 }
 .card {
     border: 1px solid;
