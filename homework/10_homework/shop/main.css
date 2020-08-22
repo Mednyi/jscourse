@@ -8,6 +8,19 @@ header {
     padding: 0px 32px;
     font-weight: 600;
 }
+.card input {
+    border: none;
+    width: 180px;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+textarea {
+    resize: none;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-family: "Times New Roman";
+}
 header .button {
     height: 40px;
     background-color: black;
