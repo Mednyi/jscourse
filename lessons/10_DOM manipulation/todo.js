@@ -71,7 +71,6 @@ class todosView {
         if (!this.$el) {
             this.$el = document.createElement('main');
         }
-        // Remove div wrapper element
         this.$el.innerHTML = this.template();
         // Add event listeners to elements
         const addButton = this.$el.firstElementChild.getElementsByTagName('div')[0];
