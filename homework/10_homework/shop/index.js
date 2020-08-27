@@ -12,11 +12,15 @@ class cardView {
     }
     template() {
         return `
+  <div id="shop_component">
+    <main>
         <div class="card">
             <h4><input type="text" placeholder="Product name" value="${this.data.productName}"><span>X</span></h4>
             <div><textarea rows="2" placeholder="Product description" value="${this.data.productDescription}"></textarea></div>
             <div class="button">Buy</div>
         </div>
+    </main>
+  </div>
         `
     }
     remove() {
@@ -54,8 +58,9 @@ class headerView {
     }
     template() {
         return `
-        <header>
-        <div class="logo">My SuperShop</div>
+  <div id="shop_component">
+    <header>
+        <div class="logo">My SuperSHop</div>
         <div class="controls">
             <input type="text" placeholder="Filter">
             <div>
@@ -63,7 +68,8 @@ class headerView {
             </div>
             <div class="button">Add new product</div>
         </div>
-        </header>
+    </header>
+  </div>
         `
     }
     addProduct() {
