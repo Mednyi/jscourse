@@ -1,5 +1,4 @@
 'use strict';
-// const todos = [];
 /*
 Реализовать добавление, фильтрацию, удаление, редактирование товаров. По клику на buy - увеличивать счётчик товаров в корзине.
 */
@@ -27,11 +26,15 @@ class cardView {
         this.$el.remove();
     }
     rename() {
-        this.data.productName = this.$el.firstElementChild.value;
+        this.data.productName = this.$el.firstElementChild.getElementsByTagName('input')[0].value;
         this.render();
     }
     changeDescription() {
-        this.data.productDescription = this.$el.firstElementChild.value;
+        this.data.productDescription = this.$el.firstElementChild.getElementsByTagName('textarea')[0].value;
+        this.render();
+    }
+    buy() {
+        this.data.productDescription = this.$el.firstElementChild.getElementsByTagName('textarea')[0].value;
         this.render();
     }
     render() {
@@ -42,7 +45,7 @@ class cardView {
         this.$el = this.$el.firstElementChild;
         const productNameInput = this.$el.firstElementChild;
         const productDescriptionInput = this.$el.getElementsByTagName('input')[0];
-        const deleteButton = this.$el.getElementsByTagName('input')[1];
+        const deleteButton = this.$el.getElementsByTagName('textarea')[0];
         productNameInput.addEventListener('blur', this.rename);
         productDescriptionInput.addEventListener('blur', this.rename);
         deleteButton.addEventListener('click', this.remove);
@@ -73,7 +76,7 @@ class headerView {
         `
     }
     addProduct() {
-        this.data.todos.push({ productName: '', productDescription: '' });
+        this.data.products.push({ productName: '', productDescription: '' });
         this.render();
     }
     filter() {
