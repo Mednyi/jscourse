@@ -32,10 +32,6 @@ class cardView {
         this.data.productDescription = this.$el.firstElementChild.getElementsByTagName('textarea')[0].value;
         this.render();
     }
-    buy() {
-        this.data.productDescription = this.$el.firstElementChild.getElementsByTagName('div')[1].value;
-        this.render();
-    }
     render() {
         if (!this.$el) {
             this.$el = document.createElement('main');
@@ -57,6 +53,7 @@ class headerView {
         this.data = data;
         this.addProduct = this.addProduct.bind(this);
         this.filter = this.filter.bind(this);
+        this.buy = this.buy.bind(this);
     }
     template() {
         return `
@@ -65,7 +62,7 @@ class headerView {
         <div class="controls">
             <input type="text" placeholder="Filter">
             <div>
-               <span>Items in cart:</span><span> 0</span>
+               <span>Items in cart:${this.data.itemsInCart}</span><span> 0</span>
             </div>
             <div class="button">Add new product</div>
         </div>
@@ -77,8 +74,12 @@ class headerView {
         this.render();
     }
     filter() {
-        const filterInput = this.$el.firstElementChild.getElementsByTagName('input')[0];
+        const filterInput = this.$el.children[1].getElementsByTagName('input')[0];
         this.data.filter = filterInput.value;
+        this.render();
+    }
+    buy() {
+        this.data.itemsInCart = this.$el.children[1].getElementsByTagName('span')[1].value + 1;
         this.render();
     }
     render() {
@@ -90,9 +91,10 @@ class headerView {
         // Add event listeners to elements
         const addButton = this.$el.children[1].getElementsByTagName('div')[0];
         const filterInput = this.$el.children[1].getElementsByTagName('input')[0];
+        const itemsInCart = this.$el.children[1].getElementsByTagName('span')[1]
         filterInput.value = this.data.filter;
         addButton.addEventListener('click', this.addProduct);
-        filterInput.addEventListener('input', this.filter);
+        itemsInCart.addEventListener('click', this.buy);
         // Render child elements
         const filtered = this.data.filter ? this.data.products.filter(product => product.title.includes(this.data.filter)) : this.data.products ;
         filtered.forEach(product => {
