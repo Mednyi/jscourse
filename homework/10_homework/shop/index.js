@@ -2,6 +2,7 @@
 /*
 Реализовать добавление, фильтрацию, удаление, редактирование товаров. По клику на buy - увеличивать счётчик товаров в корзине.
 */
+
 class cardView {
     constructor(data = { productName: '', productDescription: '' }) {
         this.data = data;
@@ -11,7 +12,6 @@ class cardView {
     }
     template() {
         return `
-  <div id="shop_component">
     <main>
         <div class="card">
             <h4><input type="text" placeholder="Product name" value="${this.data.productName}"><span>X</span></h4>
@@ -19,7 +19,6 @@ class cardView {
             <div class="button">Buy</div>
         </div>
     </main>
-  </div>
         `
     }
     remove() {
@@ -34,34 +33,33 @@ class cardView {
         this.render();
     }
     buy() {
-        this.data.productDescription = this.$el.firstElementChild.getElementsByTagName('textarea')[0].value;
+        this.data.productDescription = this.$el.firstElementChild.getElementsByTagName('div')[1].value;
         this.render();
     }
     render() {
         if (!this.$el) {
-            this.$el = document.createElement('div');
+            this.$el = document.createElement('main');
         }
         this.$el.innerHTML = this.template();
         this.$el = this.$el.firstElementChild;
-        const productNameInput = this.$el.firstElementChild;
-        const productDescriptionInput = this.$el.getElementsByTagName('input')[0];
-        const deleteButton = this.$el.getElementsByTagName('textarea')[0];
+        const productNameInput = this.$el.getElementsByTagName('input')[0];
+        const productDescriptionInput = this.$el.getElementsByTagName('textarea')[0];
+        const buyButton = this.$el.getElementsByTagName('div')[1]
         productNameInput.addEventListener('blur', this.rename);
-        productDescriptionInput.addEventListener('blur', this.rename);
-        deleteButton.addEventListener('click', this.remove);
+        productDescriptionInput.addEventListener('blur', this.changeDescription);
+        buyButton.addEventListener('click', this.buy);
         return this.$el
     }
 }
 
 class headerView {
-    constructor(data = { products: [], filter: '' }) {
+    constructor(data = { products: [], filter: '', itemsInCart: 0 }) {
         this.data = data;
         this.addProduct = this.addProduct.bind(this);
         this.filter = this.filter.bind(this);
     }
     template() {
         return `
-  <div id="shop_component">
     <header>
         <div class="logo">My SuperSHop</div>
         <div class="controls">
@@ -72,7 +70,6 @@ class headerView {
             <div class="button">Add new product</div>
         </div>
     </header>
-  </div>
         `
     }
     addProduct() {
@@ -85,26 +82,25 @@ class headerView {
         this.render();
     }
     render() {
-        // Check if element already exists, if not - create one
         if (!this.$el) {
-            this.$el = document.createElement('main');
+            this.$el = document.createElement('header');
         }
         // Remove div wrapper element
         this.$el.innerHTML = this.template();
         // Add event listeners to elements
-        const addButton = this.$el.firstElementChild.getElementsByTagName('div')[0];
-        const filterInput = this.$el.firstElementChild.getElementsByTagName('input')[0];
+        const addButton = this.$el.children[1].getElementsByTagName('div')[0];
+        const filterInput = this.$el.children[1].getElementsByTagName('input')[0];
         filterInput.value = this.data.filter;
-        addButton.addEventListener('click', this.addTodo);
+        addButton.addEventListener('click', this.addProduct);
         filterInput.addEventListener('input', this.filter);
         // Render child elements
-        const filtered = this.data.filter ? this.data.todos.filter(todo => todo.title.includes(this.data.filter)) : this.data.todos;
-        filtered.forEach(todo => {
-            const view = new todoView(todo);
+        const filtered = this.data.filter ? this.data.products.filter(product => product.title.includes(this.data.filter)) : this.data.products ;
+        filtered.forEach(product => {
+            const view = new cardView(product);
             this.$el.appendChild(view.render());
         });
         return this.$el
     }
 }
 
-document.getElementsByTagName('body')[0].appendChild(new todosView().render());
+document.getElementsByTagName('body')[0].appendChild(new cardView().render());
