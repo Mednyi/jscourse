@@ -105,4 +105,5 @@ class headerView {
     }
 }
 
-document.getElementsByTagName('body')[0].appendChild(new cardView().render());
+document.getElementsByTagName('div')[0].appendChild(new headerView().render());
+document.getElementsByTagName('div')[0].appendChild(new cardView().render());   
