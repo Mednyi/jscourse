@@ -22,6 +22,16 @@ input {
     border: none;
     border-bottom: 2px solid;
 }
+@keyframes  button{
+    from {
+        background-color: #ffcc69;
+        border: #ffcc69;
+    }
+    to {
+        background-color: white;
+        border: #ffcc69 2px solid;
+    }
+}
 div#register {
     display: flex;
     align-items: center;
@@ -31,6 +41,10 @@ div#register {
     background-color: #ffcc69;
     font-size: 16px;
     font-weight: 600;
+    box-sizing: border-box;
+}
+div#register:hover {
+    animation: button 400ms forwards;
 }
 .error-desc {
     color: red;
