@@ -1,0 +1,44 @@
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main {
+    display: grid;
+    grid-gap: 32px;
+    padding: 48px;
+    border: 1px solid;
+}
+.form-block {
+    display: flex;
+    flex-flow: column;
+}
+input {
+    height: 32px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid;
+}
+div#register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    cursor: pointer;
+    background-color: #ffcc69;
+    font-size: 16px;
+    font-weight: 600;
+}
+.error-desc {
+    color: red;
+    font-weight: 600;
+}
+h3 {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
