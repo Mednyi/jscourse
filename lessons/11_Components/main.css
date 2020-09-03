@@ -41,32 +41,21 @@ body {
 }
 main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, 240px);
     grid-gap: 32px;
     padding: 16px;
     justify-content: center;
-    justify-items: center;
 }
 h4 {
     margin: 0px;
     display: flex;
     justify-content: space-between;
 }
-main > div {
-    display: grid;
-    grid-gap: 16px;
-    border: 1px black solid;
-    width: 100%;
-    justify-items: center;
-    padding: 32px;
-    box-sizing: border-box;
-}
 .card {
     border: 1px solid;
     display: grid;
     grid-gap: 48px;
     padding: 16px;
-    max-width: 240px;
 }
 .button {
     background-color: yellow;
