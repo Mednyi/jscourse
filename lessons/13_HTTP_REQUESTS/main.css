@@ -1,0 +1,6 @@
+div.rate {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 32px;
+    width: max-content;
+}
