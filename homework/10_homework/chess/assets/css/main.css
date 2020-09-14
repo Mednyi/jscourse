@@ -6,9 +6,6 @@
     }
 }
 body {
-    margin: 0px;
-}
-body > div {
     display: grid;
     grid: 'h h' 48px
     'm m' auto
@@ -17,6 +14,7 @@ body > div {
     background: #FFFFFF;
     justify-items: center;
     min-height: 100vh;
+    margin: 0px;
 }
 header {
     grid-area: h;
@@ -163,7 +161,7 @@ h4 {
 }
 
 footer {
-    background: url(assets/images/Vector.jpg);
+    background: url(../images/Vector.jpg);
     border: 2px solid #FFFFFF;
     width: 1440px;
     height: 80px;

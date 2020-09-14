@@ -21,6 +21,11 @@ class Component {
         this.methods = this.methods();
         Object.keys(this.methods).forEach(methodName => this.methods[methodName] = this.methods[methodName].bind(this));
     }
+    destroy () {
+        this.$el.remove();
+        delete this;
+    }
+    methods () {return {}}
     template () {return ''}
     onRender () {}
     render () {
@@ -42,9 +47,29 @@ class BitcoinView extends Component {
         return `<main></main>`
     }
     methods () {
-        return {}
+        return {
+            startPolling () {
+                this.methods.getData();
+                this.timer = setInterval(this.methods.getData, 60000);
+            },
+            async getData () {
+                const response = await fetch("https://api.coindesk.com/v1/bpi/currentprice/RUB.json", {
+                    method: 'GET'
+                });
+                const newEl = document.createElement('div');
+                newEl.className = 'rate';
+                const data = await response.json(); // text formData blob arrayBuffer
+                const rate = data.bpi.RUB.rate_float;
+                const date = new Date(data.time.updatedISO);
+                newEl.innerHTML = `<span>${date.toLocaleString()}</span><span>${rate}</span>`;
+                this.$el.append(newEl);
+            },
+            stopPolling () {
+                this.timer.stop();
+            }
+        }
     }
-    async onRender() {
+    onRender() {
 /*        let xhr = new XMLHttpRequest();
         xhr.open('GET', "https://api.coindesk.com/v1/bpi/currentprice/RUB.json");
         // xhr.setRequestHeader(name, value) - request headers
@@ -64,14 +89,7 @@ class BitcoinView extends Component {
         xhr.onerror = error => {
             console.log(error);
         };*/
-        const response = await fetch("https://api.coindesk.com/v1/bpi/currentprice/RUB.json", {
-            method: 'GET',
-            headers: {
-            }
-            // body: {}
-        });
-        const data = await response.json(); // text formData blob arrayBuffer
-
+        if (!this.timer) this.methods.startPolling();
     }
 }
 document.getElementsByTagName('body')[0].appendChild(new BitcoinView().render());

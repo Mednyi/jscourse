@@ -17,9 +17,9 @@ export default class Component {
     onRender () {}
     render () {
         const wrapper = document.createElement('div');
-        wrapper.innerHTML = this.template();
+        wrapper.innerHTML = this.template(); // <div><body>.....</body></div>
         if (this.$el) {
-            this.$el.innerHTML = wrapper.firstElementChild.innerHTML;
+            this.$el.innerHTML = wrapper.firstElementChild.innerHTML; // <body>...</body>
         } else {
             this.$el = wrapper.firstElementChild;
         }
