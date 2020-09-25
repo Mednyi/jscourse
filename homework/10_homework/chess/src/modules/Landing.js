@@ -1,6 +1,9 @@
 'use strict';
 import Component from "./framework/component.js";
 export default class Landing extends Component {
+    constructor() {
+        super(null, './assets/css/landing.css');
+    }
     template() {
         return `
         <main>
@@ -17,5 +20,16 @@ export default class Landing extends Component {
             <img class="ladia" src="assets/images/ladia.png">
         </main>
         `
+    }
+    methods () {
+        return {
+            conquer () {
+                this.$router.push('auth');
+            }
+        }
+    }
+    onRender() {
+        const button = this.$el.getElementsByTagName('input')[0];
+        button.onclick = this.methods.conquer;
     }
 }
