@@ -26,10 +26,13 @@ footer {
     align-self: end;
 }
 h3 {
-    font-weight: bold;
-    font-size: 24px;
     margin: 0px;
     margin-bottom: 16px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
 }
 #rating {
     font-size: 24px;
@@ -38,7 +41,6 @@ h3 {
 main {
     grid-area: m;
     width: 416px;
-    box-sizing: border-box;
     padding: 32px;
     align-self: center;
 }
@@ -89,6 +91,36 @@ header {
     top: 12px;
     border: 2px solid #FFFFFF;
 }
+.right {
+    display: grid;
+}
+div#info {
+    display: grid;
+    align-self: end;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    grid-gap: 16px;
+    padding-top: 32px;
+}
+.buttons {
+    grid-gap: 32px;
+    padding-top: 48px;
+    display: grid;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0px;
+    border: black solid 2px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
 .burger2{
     width: 32px;
     height: 0px;
@@ -102,4 +134,9 @@ header {
     left: 1216px;
     margin-top: 5px;
     border: 2px solid #FFFFFF;
+}
+section.headSection {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 32px;
 }
